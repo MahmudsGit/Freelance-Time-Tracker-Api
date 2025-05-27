@@ -1,61 +1,181 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Freelance Time Tracker API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A robust API built with **Laravel** to help freelancers log and manage their work time across clients and projects.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Getting Started
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+To set up and run the Freelance Time Tracker API, ensure you have the following installed:
 
-## Learning Laravel
+- **PHP**: 8.1 or higher
+- **Composer**: Dependency manager for PHP
+- **MySQL/PostgreSQL**: Database server
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Tech Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **PHP**: 8.1
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Laravel 12
 
-## Laravel Sponsors
+- Sanctum
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Eloquent ORM
 
-### Premium Partners
+- Factories & Seeders
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- MySQL/PostgreSQL
 
-## Contributing
+- laravel-dompdf (for exort)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- schedule (for schedule mail)
 
-## Code of Conduct
+- PHPUnit (for tests)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Installation
 
-## Security Vulnerabilities
+Follow these steps to get the API up and running:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. **Clone the Repository**
 
-## License
+   ```bash
+   git clone https://github.com/MahmudsGit/Freelance-Time-Tracker-Api.git
+   cd Freelance-Time-Tracker-Api
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. **Install Dependencies**
+
+   ```bash
+   composer install
+   ```
+
+3. **Copy .env and Generate App Key**
+
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+4. **Configure .env**
+
+   Update the `.env` file with your database and mail settings. Example:
+
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=freelance_time_tracker
+   DB_USERNAME=root
+   DB_PASSWORD=your_password
+   ```
+
+5. **Run Migrations and Seeders**
+
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. **Run the Server**
+
+   ```bash
+   php artisan serve
+   ```
+
+   The API will be available at `http://localhost:8000`.
+
+## API Authentication
+
+The API uses **Laravel Sanctum** for token-based authentication.
+
+1. **Register or Login** to obtain an API token.
+2. Include the token in the headers for protected routes:
+
+   ```makefile
+   Authorization: Bearer <token>
+   ```
+
+## How to Test
+
+### Automated Testing
+
+Run the test suite to verify the API functionality:
+
+```bash
+php artisan test
+```
+
+To run specific tests:
+
+```bash
+php artisan test --filter=CompanyTest
+```
+
+> **Note**: test environment is configured with base database.
+
+### Manual Testing with Postman
+
+1. Import the provided **Postman collection** from git root directory.
+2. Start the Laravel development server:
+
+   ```bash
+   php artisan serve
+   ```
+
+3. Use the authentication endpoints (`/api/register` or `/api/login`) to obtain a token.
+4. Test protected routes for clients, projects, and time log operations using the obtained token.
+
+## Database Structure
+
+The API uses the following database schema to manage users, clients, projects, and time logs.
+
+### Users
+
+| Column       | Type     | Description                     |
+|--------------|----------|---------------------------------|
+| `id`         | bigint   | Primary Key                    |
+| `name`       | string   | Full name                      |
+| `email`      | string   | Unique email                   |
+| `password`   | string   | Hashed password                |
+| `timestamps` | datetime | Created and updated dates      |
+
+### Clients
+
+| Column            | Type     | Description                     |
+|-------------------|----------|---------------------------------|
+| `id`              | bigint   | Primary Key                    |
+| `user_id`         | bigint   | Foreign key to `users`         |
+| `name`            | string   | Client name                    |
+| `email`           | string   | Client email                   |
+| `contact_person`  | string   | Contact name                   |
+| `timestamps`      | datetime | Created and updated dates      |
+
+### Projects
+
+| Column        | Type     | Description                     |
+|---------------|----------|---------------------------------|
+| `id`          | bigint   | Primary Key                    |
+| `client_id`   | bigint   | Foreign key to `clients`       |
+| `title`       | string   | Project title                  |
+| `description` | text     | Project description            |
+| `status`      | enum     | `active`, `completed`, etc.    |
+| `deadline`    | date     | Project deadline               |
+| `timestamps`  | datetime | Created and updated dates      |
+
+### Time Logs
+
+| Column        | Type     | Description                        |
+|---------------|----------|------------------------------------|
+| `id`          | bigint   | Primary Key                       |
+| `project_id`  | bigint   | Foreign key to `projects`         |
+| `start_time`  | datetime | Log start time                    |
+| `end_time`    | datetime | Log end time                      |
+| `description` | text     | Work description                  |
+| `hours`       | float    | Auto-calculated or manual entry   |
+| `tags`        | string   | Billable/Non-billable (optional)  |
+| `timestamps`  | datetime | Created and updated dates         |
+
+## Additional Notes
+
+- Ensure your database is properly configured before running migrations.
