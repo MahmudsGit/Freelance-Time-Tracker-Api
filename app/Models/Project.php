@@ -21,4 +21,9 @@ class Project extends Model
     {
         return $this->hasMany(TimeLog::class);
     }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }
