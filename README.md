@@ -122,7 +122,7 @@ php artisan test --filter=CompanyTest
 
 > **Note**: test environment is configured with base database.
 
-### Manual Testing with Postman
+### Manual Testing with Postman /API Documentation
 
 1. Import the provided **Postman collection** from git root directory.
 2. Start the Laravel development server:
@@ -133,6 +133,11 @@ php artisan test --filter=CompanyTest
 
 3. Use the authentication endpoints (`/api/register` or `/api/login`) to obtain a token.
 4. Test protected routes for clients, projects, and time log operations using the obtained token.
+5. api documentation by postman:
+
+      ```bash
+      https://documenter.getpostman.com/view/21749152/2sB2qdgfZ5
+      ```
 
 ## Database Structure
 
