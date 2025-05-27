@@ -96,6 +96,14 @@ The API uses **Laravel Sanctum** for token-based authentication.
    Authorization: Bearer <token>
    ```
 
+## Schedule Run
+
+created daily shedule if hours is 8+. to check this run:
+
+   ```bash
+   php artisan schedule:run
+   ```
+
 ## How to Test
 
 ### Automated Testing
