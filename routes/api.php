@@ -23,4 +23,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Projects
     Route::apiResource('projects', ProjectController::class);
+
+    // Time Logs
+    Route::apiResource('time-logs', TimeLogController::class);
+
 });
