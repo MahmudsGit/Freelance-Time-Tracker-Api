@@ -23,6 +23,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Time Logs
     Route::apiResource('time-logs', TimeLogController::class);
-
+    
+    Route::get('/export', [ReportController::class, 'export']);
     Route::get('/report', [ReportController::class, 'report']);
 });

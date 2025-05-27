@@ -4,54 +4,75 @@ namespace App\Http\Controllers;
 
 use App\Models\TimeLog;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
     public function report(Request $request)
     {
         $request->validate([
-            'from' => 'required|date',
-            'to' => 'required|date|after_or_equal:from',
-            'client_id' => 'nullable|exists:clients,id'
+            'client_id' => 'nullable|exists:clients,id',
+            'project_id' => 'nullable|exists:projects,id',
+            'from' => 'nullable|date',
+            'to' => 'nullable|date|after_or_equal:from',
         ]);
 
-        $query = TimeLog::with(['project.client'])
-            ->whereBetween('start_time', [$request->from, $request->to]);
+        $user = $request->user();
 
-        if ($request->client_id) {
-            $query->whereHas('project.client', function ($q) use ($request) {
-                $q->where('id', $request->client_id);
+        $timeLogs = TimeLog::query()
+            ->whereHas('project.client', function ($q) use ($user, $request) {
+                $q->where('user_id', $user->id);
+
+                if ($request->filled('client_id')) {
+                    $q->where('id', $request->client_id);
+                }
+            })
+            ->when($request->filled('project_id'), function ($q) use ($request) {
+                $q->where('project_id', $request->project_id);
+            })
+            ->when($request->filled('from'), function ($q) use ($request) {
+                $q->whereDate('start_time', '>=', $request->from);
+            })
+            ->when($request->filled('to'), function ($q) use ($request) {
+                $q->whereDate('end_time', '<=', $request->to);
             });
-        }
 
-        $logs = $query->get();
+        // Grouped totals
+        $perProject = (clone $timeLogs)
+            ->select('project_id', DB::raw('SUM(hours) as total_hours'))
+            ->groupBy('project_id')
+            ->with('project')
+            ->get();
 
-        $totalPerProject = $logs->groupBy('project_id')->map(function ($group) {
-            return [
-                'project_title' => $group->first()->project->title,
-                'total_hours' => $group->sum('hours'),
-            ];
-        })->values();
+        $perDay = (clone $timeLogs)
+            ->select(DB::raw('DATE(start_time) as date'), DB::raw('SUM(hours) as total_hours'))
+            ->groupBy(DB::raw('DATE(start_time)'))
+            ->orderBy('date')
+            ->get();
 
-        $totalPerDay = $logs->groupBy(function ($log) {
-            return \Carbon\Carbon::parse($log->start_time)->format('Y-m-d');
-        })->map(function ($group) {
-            return $group->sum('hours');
-        });
-
-        $totalPerClient = $logs->groupBy(function ($log) {
-            return $log->project->client->id;
-        })->map(function ($group) {
-            return [
-                'client_name' => $group->first()->project->client->name,
-                'total_hours' => $group->sum('hours'),
-            ];
-        })->values();
+        $perClient = (clone $timeLogs)
+            ->join('projects', 'time_logs.project_id', '=', 'projects.id')
+            ->join('clients', 'projects.client_id', '=', 'clients.id')
+            ->select('clients.id as client_id', 'clients.name', DB::raw('SUM(time_logs.hours) as total_hours'))
+            ->groupBy('clients.id', 'clients.name')
+            ->get();
 
         return response()->json([
-            'per_project' => $totalPerProject,
-            'per_day' => $totalPerDay,
-            'per_client' => $totalPerClient,
-        ]);
+            'per_project' => $perProject,
+            'per_day' => $perDay,
+            'per_client' => $perClient,
+        ], 200);
+    }
+
+    public function export(Request $request)
+    {
+        $logs = TimeLog::whereHas('project.client', function ($q) use ($request) {
+            $q->where('user_id', $request->user()->id);
+        })->with('project.client')->get();
+
+        $pdf = Pdf::loadView('pdf.logs', compact('logs'));
+
+        return $pdf->download('timelogs.pdf');
     }
 }
