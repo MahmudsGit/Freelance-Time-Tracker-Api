@@ -20,4 +20,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Clients
     Route::apiResource('clients', ClientController::class);
+
+    // Projects
+    Route::apiResource('projects', ProjectController::class);
 });
