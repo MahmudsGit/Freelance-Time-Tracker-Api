@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use App\Http\Resources\ClientResource;
+use Illuminate\Http\JsonResponse;
 
 class ClientController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request): JsonResponse
     {
-        return $request->user()->clients;
+        $clients = $request->user()->clients;
+        
+        return response()->json(ClientResource::collection($clients), 200);
     }
 
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
         $data = $request->validate([
             'name' => 'required',
@@ -20,23 +24,27 @@ class ClientController extends Controller
             'contact_person' => 'required',
         ]);
 
-        return $request->user()->clients()->create($data);
+        $client = $request->user()->clients()->create($data);
+
+        return response()->json(new ClientResource($client), 201);
     }
 
-    public function show(Client $client)
+    public function show(Client $client): JsonResponse
     {
-        return $client;
+        return response()->json(new ClientResource($client), 200);
     }
 
-    public function update(Request $request, Client $client)
+    public function update(Request $request, Client $client): JsonResponse
     {
         $client->update($request->only(['name', 'email', 'contact_person']));
-        return $client;
+
+        return response()->json(new ClientResource($client), 200);
     }
 
-    public function destroy(Client $client)
+    public function destroy(Client $client): JsonResponse
     {
         $client->delete();
-        return response()->noContent();
+
+        return response()->json(null, 204);
     }
 }
