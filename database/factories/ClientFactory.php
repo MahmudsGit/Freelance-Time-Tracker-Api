@@ -15,11 +15,11 @@ class ClientFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
-{
-    return [
-        'name' => $this->faker->company,
-        'email' => $this->faker->companyEmail,
-        'contact_person' => $this->faker->name,
-    ];
-}
+    {
+        return [
+            'name' => $this->faker->company,
+            'email' => $this->faker->companyEmail,
+            'contact_person' => $this->faker->name,
+        ];
+    }
 }

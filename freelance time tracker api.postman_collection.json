@@ -1,0 +1,1882 @@
+{
+	"info": {
+		"_postman_id": "13eca4bb-4b9e-4ec4-9b3b-7447e32c673e",
+		"name": "freelance time tracker api",
+		"description": "HAR To Postman Generated Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21749152"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/register",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/register",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 May 2025 21:59:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"token\": \"1|TWnPpeXUmem9vOKa4SGkB5DpqcCiBAP2vnTmaRTFb2c134ae\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/login",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/login",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 09:29:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"token\": \"8|g02U4OCgRLVkP45UcNj0s8XXllZ9i4qIbSFBFVp75e2b9c1d\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/user",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/user",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 06:29:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 3,\n \"name\": \"test\",\n \"email\": \"test@gmail.com\",\n \"email_verified_at\": null,\n \"created_at\": \"2025-05-24T21:54:42.000000Z\",\n \"updated_at\": \"2025-05-24T21:54:42.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 5|AJE0Tu6w23SAF4Ldhq0s0L9Kvp46VFsi8PaExszo8ac9c0f4"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/logout",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " / 500",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 5|AJE0Tu6w23SAF4Ldhq0s0L9Kvp46VFsi8PaExszo8ac9c0f4"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/logout",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 26 May 2025 10:29:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "text/html; charset=UTF-8 content type is not supported in the response body"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "clients",
+			"item": [
+				{
+					"name": "clients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/clients",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/clients",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 06:57:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 9,\n  \"name\": \"test 4\",\n  \"email\": \"test4@gmail.com\",\n  \"contact_person\": \"password\",\n  \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n  \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "clients create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/clients",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/clients",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"clients"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 06:45:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 9,\n \"name\": \"test 4\",\n \"email\": \"test4@gmail.com\",\n \"contact_person\": \"password\",\n \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "clients update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/clients/8",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/clients/8",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"clients",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 06:46:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 8,\n \"name\": \"test 1\",\n \"email\": \"test12@gmail.com\",\n \"contact_person\": \"test 3\",\n \"created_at\": \"2025-05-27T06:33:21.000000Z\",\n \"updated_at\": \"2025-05-27T06:46:24.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "clients show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/clients/9",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/clients/9",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"clients",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:00:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 9,\n \"name\": \"test 4\",\n \"email\": \"test4@gmail.com\",\n \"contact_person\": \"password\",\n \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "clients delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/clients/8",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "not found / 404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/clients/8",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"clients",
+										"8"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 27 May 2025 06:46:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "text/html; charset=UTF-8 content type is not supported in the response body"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/projects",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/projects",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:28:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 9,\n  \"client\": {\n   \"id\": 9,\n   \"name\": \"test 4\",\n   \"email\": \"test4@gmail.com\",\n   \"contact_person\": \"password\",\n   \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n   \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n  },\n  \"title\": \"project test 4\",\n  \"description\": \"test 4\",\n  \"status\": \"active\",\n  \"deadline\": \"2025-07-31\",\n  \"created_at\": \"2025-05-27T07:24:03.000000Z\",\n  \"updated_at\": \"2025-05-27T07:24:03.000000Z\"\n },\n {\n  \"id\": 11,\n  \"client\": {\n   \"id\": 9,\n   \"name\": \"test 4\",\n   \"email\": \"test4@gmail.com\",\n   \"contact_person\": \"password\",\n   \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n   \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n  },\n  \"title\": \"project test 15\",\n  \"description\": \"test 4\",\n  \"status\": \"active\",\n  \"deadline\": \"2025-07-31\",\n  \"created_at\": \"2025-05-27T08:28:46.000000Z\",\n  \"updated_at\": \"2025-05-27T08:28:46.000000Z\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "projects create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/projects",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/projects",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"projects"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:28:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 11,\n \"client\": {\n  \"id\": 9,\n  \"name\": \"test 4\",\n  \"email\": \"test4@gmail.com\",\n  \"contact_person\": \"password\",\n  \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n  \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n },\n \"title\": \"project test 15\",\n \"description\": \"test 4\",\n \"status\": \"active\",\n \"deadline\": \"2025-07-31\",\n \"created_at\": \"2025-05-27T08:28:46.000000Z\",\n \"updated_at\": \"2025-05-27T08:28:46.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "projects update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/projects/11",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/projects/11",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:29:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 11,\n \"client\": {\n  \"id\": 9,\n  \"name\": \"test 4\",\n  \"email\": \"test4@gmail.com\",\n  \"contact_person\": \"password\",\n  \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n  \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n },\n \"title\": \"project test 11\",\n \"description\": \"test 4\",\n \"status\": \"active\",\n \"deadline\": \"2025-07-31\",\n \"created_at\": \"2025-05-27T08:28:46.000000Z\",\n \"updated_at\": \"2025-05-27T08:29:21.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "projects show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/projects/10",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/projects/10",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"10"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 07:28:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 10,\n \"client\": {\n  \"id\": 9,\n  \"name\": \"test 4\",\n  \"email\": \"test4@gmail.com\",\n  \"contact_person\": \"password\",\n  \"created_at\": \"2025-05-27T06:45:47.000000Z\",\n  \"updated_at\": \"2025-05-27T06:45:47.000000Z\"\n },\n \"title\": \"project test 5\",\n \"description\": \"test 4\",\n \"status\": \"active\",\n \"deadline\": \"2025-07-31\",\n \"created_at\": \"2025-05-27T07:24:23.000000Z\",\n \"updated_at\": \"2025-05-27T07:24:23.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "projects delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/projects/10",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "no-content / 204",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/projects/10",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"projects",
+										"10"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 07:59:50 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "time-logs",
+			"item": [
+				{
+					"name": "time-logs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/time-logs",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"time-logs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/time-logs",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"time-logs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:46:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"id\": 81,\n  \"project\": {\n   \"id\": 9,\n   \"title\": \"project test 4\",\n   \"description\": \"test 4\",\n   \"status\": \"active\",\n   \"deadline\": \"2025-07-31\",\n   \"created_at\": \"2025-05-27T07:24:03.000000Z\",\n   \"updated_at\": \"2025-05-27T07:24:03.000000Z\"\n  },\n  \"start_time\": \"2025-05-26 09:00:00\",\n  \"end_time\": \"2025-05-26 11:30:00\",\n  \"hours\": 2.5,\n  \"description\": \"Worked on user authentication and API integration.\",\n  \"tag\": \"non-billable\",\n  \"created_at\": \"2025-05-27T08:24:38.000000Z\",\n  \"updated_at\": \"2025-05-27T08:44:56.000000Z\"\n },\n {\n  \"id\": 82,\n  \"project\": {\n   \"id\": 9,\n   \"title\": \"project test 4\",\n   \"description\": \"test 4\",\n   \"status\": \"active\",\n   \"deadline\": \"2025-07-31\",\n   \"created_at\": \"2025-05-27T07:24:03.000000Z\",\n   \"updated_at\": \"2025-05-27T07:24:03.000000Z\"\n  },\n  \"start_time\": \"2025-06-26 09:00:00\",\n  \"end_time\": \"2025-08-26 11:30:00\",\n  \"hours\": 1466.5,\n  \"description\": \"Worked on user authentication and API integration.\",\n  \"tag\": \"billable\",\n  \"created_at\": \"2025-05-27T08:46:08.000000Z\",\n  \"updated_at\": \"2025-05-27T08:46:08.000000Z\"\n }\n]"
+						}
+					]
+				},
+				{
+					"name": "time-logs create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/time-logs",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"time-logs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created / 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/time-logs",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"time-logs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:46:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 82,\n \"project\": {\n  \"id\": 9,\n  \"title\": \"project test 4\",\n  \"description\": \"test 4\",\n  \"status\": \"active\",\n  \"deadline\": \"2025-07-31\",\n  \"created_at\": \"2025-05-27T07:24:03.000000Z\",\n  \"updated_at\": \"2025-05-27T07:24:03.000000Z\"\n },\n \"start_time\": \"2025-06-26T09:00:00\",\n \"end_time\": \"2025-08-26T11:30:00\",\n \"hours\": 1466.5,\n \"description\": \"Worked on user authentication and API integration.\",\n \"tag\": \"billable\",\n \"created_at\": \"2025-05-27T08:46:08.000000Z\",\n \"updated_at\": \"2025-05-27T08:46:08.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "time-logs update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/time-logs/81",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"time-logs",
+								"81"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/time-logs/81",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"time-logs",
+										"81"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 08:44:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"id\": 81,\n \"project\": {\n  \"id\": 9,\n  \"title\": \"project test 4\",\n  \"description\": \"test 4\",\n  \"status\": \"active\",\n  \"deadline\": \"2025-07-31\",\n  \"created_at\": \"2025-05-27T07:24:03.000000Z\",\n  \"updated_at\": \"2025-05-27T07:24:03.000000Z\"\n },\n \"start_time\": \"2025-05-26T09:00:00\",\n \"end_time\": \"2025-05-26T11:30:00\",\n \"hours\": 2.5,\n \"description\": \"Worked on user authentication and API integration.\",\n \"tag\": \"non-billable\",\n \"created_at\": \"2025-05-27T08:24:38.000000Z\",\n \"updated_at\": \"2025-05-27T08:44:56.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "time-logs show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/time-logs/80",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"time-logs",
+								"80"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "forbidden / 403",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/time-logs/80",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"time-logs",
+										"80"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 27 May 2025 08:44:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "text/html; charset=UTF-8 content type is not supported in the response body"
+						}
+					]
+				},
+				{
+					"name": "tiime-logs delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/time-logs/8",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"time-logs",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "forbidden / 403",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/time-logs/8",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"time-logs",
+										"8"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 27 May 2025 08:46:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "text/html; charset=UTF-8 content type is not supported in the response body"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"item": [
+				{
+					"name": "export",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/export",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"export"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 7|NUyNYYwrW6cro8LgZn2rA2ePwjJDjaBRWVldGXIc511f1fc7"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/export",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"export"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/pdf"
+								},
+								{
+									"key": "Content-Disposition",
+									"value": "attachment; filename=timelogs.pdf"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2037"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 09:09:44 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "application/pdf content type is not supported in the response body"
+						}
+					]
+				},
+				{
+					"name": "report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 8|g02U4OCgRLVkP45UcNj0s8XXllZ9i4qIbSFBFVp75e2b9c1d"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/report?client_id=1&from=2012-01-01&to=2028-01-01",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"report"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "1"
+								},
+								{
+									"key": "from",
+									"value": "2012-01-01"
+								},
+								{
+									"key": "to",
+									"value": "2028-01-01"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer 8|g02U4OCgRLVkP45UcNj0s8XXllZ9i4qIbSFBFVp75e2b9c1d"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/report?client_id=1&from=2012-01-01&to=2028-01-01",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"report"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": "1"
+										},
+										{
+											"key": "from",
+											"value": "2012-01-01"
+										},
+										{
+											"key": "to",
+											"value": "2028-01-01"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 May 2025 09:31:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"per_project\": [\n  {\n   \"project_id\": 1,\n   \"total_hours\": 36,\n   \"project\": {\n    \"id\": 1,\n    \"client_id\": 1,\n    \"title\": \"Occaecati nobis rerum.\",\n    \"description\": \"Repudiandae sint voluptas ipsum nam quia voluptates. Sit facere beatae non libero non qui placeat vel. Dolorum sed voluptatum similique. Ut maxime sit ex voluptatibus omnis.\",\n    \"status\": \"active\",\n    \"deadline\": \"2025-06-21\",\n    \"created_at\": \"2025-05-24T21:45:22.000000Z\",\n    \"updated_at\": \"2025-05-24T21:45:22.000000Z\"\n   }\n  },\n  {\n   \"project_id\": 2,\n   \"total_hours\": 49,\n   \"project\": {\n    \"id\": 2,\n    \"client_id\": 1,\n    \"title\": \"Voluptas iste est.\",\n    \"description\": \"Fuga rerum molestiae quibusdam dolorum in temporibus magni. Aspernatur repudiandae quia aliquam quia est veniam et. Et eos aperiam aut.\",\n    \"status\": \"completed\",\n    \"deadline\": \"2025-06-02\",\n    \"created_at\": \"2025-05-24T21:45:22.000000Z\",\n    \"updated_at\": \"2025-05-24T21:45:22.000000Z\"\n   }\n  }\n ],\n \"per_day\": [\n  {\n   \"date\": \"2025-05-17\",\n   \"total_hours\": 1\n  },\n  {\n   \"date\": \"2025-05-18\",\n   \"total_hours\": 8\n  },\n  {\n   \"date\": \"2025-05-19\",\n   \"total_hours\": 11\n  },\n  {\n   \"date\": \"2025-05-20\",\n   \"total_hours\": 18\n  },\n  {\n   \"date\": \"2025-05-21\",\n   \"total_hours\": 6\n  },\n  {\n   \"date\": \"2025-05-22\",\n   \"total_hours\": 14\n  },\n  {\n   \"date\": \"2025-05-23\",\n   \"total_hours\": 25\n  },\n  {\n   \"date\": \"2025-05-24\",\n   \"total_hours\": 2\n  }\n ],\n \"per_client\": [\n  {\n   \"client_id\": 1,\n   \"name\": \"Olson and Sons\",\n   \"total_hours\": 85\n  }\n ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL1",
+			"value": "http://127.0.0.1:8000",
+			"type": "any"
+		}
+	]
+}

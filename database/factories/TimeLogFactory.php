@@ -15,16 +15,16 @@ class TimeLogFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
-{
-    $start = $this->faker->dateTimeBetween('-1 week', 'now');
-    $end = (clone $start)->modify('+'.rand(1, 8).' hours');
+    {
+        $start = $this->faker->dateTimeBetween('-1 week', 'now');
+        $end = (clone $start)->modify('+' . rand(1, 8) . ' hours');
 
-    return [
-        'start_time' => $start,
-        'end_time' => $end,
-        'description' => $this->faker->sentence,
-        'hours' => round(($end->getTimestamp() - $start->getTimestamp()) / 3600, 2),
-        'tag' => $this->faker->randomElement(['billable', 'non-billable']),
-    ];
-}
+        return [
+            'start_time' => $start,
+            'end_time' => $end,
+            'description' => $this->faker->sentence,
+            'hours' => round(($end->getTimestamp() - $start->getTimestamp()) / 3600, 2),
+            'tag' => $this->faker->randomElement(['billable', 'non-billable']),
+        ];
+    }
 }
